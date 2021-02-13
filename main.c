@@ -48,7 +48,7 @@ ISR(TIM0_COMPA_vect) {
 }
 
 
-void setHSV(hue)
+void setHSV(int hue)
 {
 	char r, g, b;
 	unsigned int accent = hue / 60;
@@ -99,7 +99,7 @@ void setHSV(hue)
 }
 
 
-int main(void) {
+int main() {
 
 	DDR = (1 << RGBRED) | (1 << RGBGREEN) | (1 << RGBBLUE) | (1 << RED) | (1 << BLUE);
 
